@@ -1,6 +1,6 @@
 
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, EmailStr
 
 app = FastAPI(title="User CRUD API")
 
@@ -10,7 +10,7 @@ next_id = 1
 
 class UserCreate(BaseModel):
     name: str = Field(..., min_length=1, max_length=100)
-    age: int = Field(..., ge=0, le=120)
+    email: EmailStr
 
 
 class User(UserCreate):
