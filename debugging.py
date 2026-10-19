@@ -15,6 +15,8 @@ def find_largest(numbers):
 
 # Tests
 if __name__ == "__main__":
-    print(find_largest([3, 7, 2, 9, 5]))  # Expected: 9
-    print(find_largest([-8, -3, -10]))    # Expected: -3
-    print(find_largest([4]))              # Expected: 4
+    assert find_largest([10, 5, 20, 3]) == 20
+    assert find_largest([-10, -5, -20, -3]) == -3
+    assert find_largest([5]) == 5
+
+    print("All debugging tests passed!")
